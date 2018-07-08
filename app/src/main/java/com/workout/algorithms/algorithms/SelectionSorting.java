@@ -1,7 +1,7 @@
 package com.workout.algorithms.algorithms;
 
 public class SelectionSorting {
-   public static void performSorting(int[] array) {
+    public static void performSorting(int[] array) {
         for(int step = 0; step < array.length - 1; step++) {
             int minIndex = step;
 
@@ -17,5 +17,5 @@ public class SelectionSorting {
                 array[minIndex] = temp;
             }
         }
-   }
+    }
 }
