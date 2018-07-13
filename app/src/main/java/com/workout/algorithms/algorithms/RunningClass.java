@@ -19,12 +19,22 @@ public class RunningClass {
 //
 //        System.out.println(testing.binarySearchForAll(testingStringArray, 6));
 
-        int[] someThing = new int[] {10, 1, 8, 6, 5, 7, 9, 4, 2, 3};
+//        int[] someThing = new int[] {10, 1, 8, 6, 5, 7, 9, 4, 2, 3};
+//
+//        SelectionSorting.performSorting(someThing);
+//
+//        for(int step = 0; step < someThing.length; step++) {
+//            System.out.println(someThing[step]);
+//        }
 
-        SelectionSorting.performSorting(someThing);
+        String[] testingStringArray = new String[] {"B", "C", "J", "D", "G", "H", "F", "I", "E", "K", "O", "M", "L", "N", "A"};
 
-        for(int step = 0; step < someThing.length; step++) {
-            System.out.println(someThing[step]);
+        SelectionSorting<String> sorter = new SelectionSorting<>();
+
+        sorter.performSortingForAll(testingStringArray);
+
+        for(int step = 0; step < testingStringArray.length; step++) {
+            System.out.println(testingStringArray[step]);
         }
     }
 }
