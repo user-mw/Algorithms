@@ -27,14 +27,22 @@ public class RunningClass {
 //            System.out.println(someThing[step]);
 //        }
 
-        String[] testingStringArray = new String[] {"B", "C", "J", "D", "G", "H", "F", "I", "E", "K", "O", "M", "L", "N", "A"};
+//        String[] testingStringArray = new String[] {"B", "C", "J", "D", "G", "H", "F", "I", "E", "K", "O", "M", "L", "N", "A"};
+//
+//        SelectionSorting<String> sorter = new SelectionSorting<>();
+//
+//        sorter.performSortingForAll(testingStringArray);
+//
+//        for(int step = 0; step < testingStringArray.length; step++) {
+//            System.out.println(testingStringArray[step]);
+//        }
 
-        SelectionSorting<String> sorter = new SelectionSorting<>();
+        int[] array = new int[] {6, 4, 3, 2, 5, 7, 1, 10, 12, 11, 8, 9, 15, 14, 13, 16};
 
-        sorter.performSortingForAll(testingStringArray);
+        InsertionSorter.performSorting(array);
 
-        for(int step = 0; step < testingStringArray.length; step++) {
-            System.out.println(testingStringArray[step]);
+        for(int step = 0; step < array.length; step++) {
+            System.out.println(array[step]);
         }
     }
 }
