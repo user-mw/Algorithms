@@ -37,12 +37,22 @@ public class RunningClass {
 //            System.out.println(testingStringArray[step]);
 //        }
 
-        int[] array = new int[] {6, 4, 3, 2, 5, 7, 1, 10, 12, 11, 8, 9, 15, 14, 13, 16};
+//        int[] array = new int[] {6, 4, 3, 2, 5, 7, 1, 10, 12, 11, 8, 9, 15, 14, 13, 16};
+//
+//        InsertionSorter.performSorting(array);
+//
+//        for(int step = 0; step < array.length; step++) {
+//            System.out.println(array[step]);
+//        }
+        String[] testingStringArray = new String[] {"B", "C", "J", "D", "G", "H", "F", "I", "E", "K", "O", "M", "L", "N", "A"};
 
-        InsertionSorter.performSorting(array);
+        InsertionSorter<String> sorter = new InsertionSorter<>();
 
-        for(int step = 0; step < array.length; step++) {
-            System.out.println(array[step]);
+        sorter.performSortingForAll(testingStringArray);
+
+        for(int step = 0; step < testingStringArray.length; step++) {
+            System.out.println(testingStringArray[step]);
         }
+
     }
 }
