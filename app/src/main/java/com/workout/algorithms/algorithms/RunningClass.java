@@ -5,7 +5,7 @@ public class RunningClass {
         //System.out.println(showBetween(5));
         //SomeSimpleAlgorithms.showBetween(5);
         //System.out.println(SomeSimpleAlgorithms.testFactorial(4));
-        int[] testingArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        //int[] testingArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 //        System.out.println(SearchAlgorithms.binarySearch(
 //                testingArray,
 //                15));
@@ -44,15 +44,26 @@ public class RunningClass {
 //        for(int step = 0; step < array.length; step++) {
 //            System.out.println(array[step]);
 //        }
-        String[] testingStringArray = new String[] {"B", "C", "J", "D", "G", "H", "F", "I", "E", "K", "O", "M", "L", "N", "A"};
+//        String[] testingStringArray = new String[] {"B", "C", "J", "D", "G", "H", "F", "I", "E", "K", "O", "M", "L", "N", "A"};
+//
+//        InsertionSorter<String> sorter = new InsertionSorter<>();
+//
+//        sorter.performSortingForAll(testingStringArray);
+//
+//        for(int step = 0; step < testingStringArray.length; step++) {
+//            System.out.println(testingStringArray[step]);
+//        }
 
-        InsertionSorter<String> sorter = new InsertionSorter<>();
+        long[] testingIntArray = new long[] {7, 3, 4, 5, 1, 10, 2, 8, 6, 9, 0, 12, 15, 13, 16, 11, 14};
 
-        sorter.performSortingForAll(testingStringArray);
+        MergeSorter.performSorting(testingIntArray, 0, 16);
 
-        for(int step = 0; step < testingStringArray.length; step++) {
-            System.out.println(testingStringArray[step]);
+        String result = "";
+        for(int step = 0; step < testingIntArray.length; step++) {
+            result += testingIntArray[step] + " ";
         }
+
+        System.out.println(result);
 
     }
 }
