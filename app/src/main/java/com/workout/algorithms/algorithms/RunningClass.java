@@ -56,7 +56,7 @@ public class RunningClass {
 
         long[] testingIntArray = new long[] {7, 3, 4, 5, 1, 10, 2, 8, 6, 9, 0, 12, 15, 13, 16, 11, 14};
 
-        MergeSorter.performSorting(testingIntArray, 0, 16);
+        MergeSorter.performSorting(testingIntArray, 0, testingIntArray.length - 1);
 
         String result = "";
         for(int step = 0; step < testingIntArray.length; step++) {
