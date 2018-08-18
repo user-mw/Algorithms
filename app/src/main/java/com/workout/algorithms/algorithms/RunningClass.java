@@ -63,15 +63,18 @@ public class RunningClass {
 //            result += testingIntArray[step] + " ";
 //        }
 
-        String[] testingStringArray = new String[] {"B", "L", "C", "G", "K", "N", "J", "D", "E", "H", "I", "O", "Q", "R", "M", "A", "F", "P"};
-        String[] checkingArray = new String[testingStringArray.length];
+//        String[] testingStringArray = new String[] {"B", "L", "C", "G", "K", "N", "J", "D", "E", "H", "I", "O", "Q", "R", "M", "A", "F", "P"};
+//        String[] checkingArray = new String[testingStringArray.length];
+//
+//        MergeSorter<String> sorter = new MergeSorter<>();
+//        sorter.performSortingForAll(testingStringArray, checkingArray, 0, testingStringArray.length - 1);
 
-        MergeSorter<String> sorter = new MergeSorter<>();
-        sorter.performSortingForAll(testingStringArray, checkingArray, 0, testingStringArray.length - 1);
+        int[] testingArray = new int[] {7, 3, 4, 5, 1, 10, 2, 8, 6, 9, 0, 12, 15, 13, 16, 11, 14};
+        BubbleSorter.performSorting(testingArray);
 
         String result = "";
-        for(int step = 0; step < testingStringArray.length; step++) {
-            result += testingStringArray[step] + " ";
+        for(int step = 0; step < testingArray.length; step++) {
+            result += testingArray[step] + " ";
         }
 
         System.out.println(result);
