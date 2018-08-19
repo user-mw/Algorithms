@@ -69,8 +69,11 @@ public class RunningClass {
 //        MergeSorter<String> sorter = new MergeSorter<>();
 //        sorter.performSortingForAll(testingStringArray, checkingArray, 0, testingStringArray.length - 1);
 
-        int[] testingArray = new int[] {7, 3, 4, 5, 1, 10, 2, 8, 6, 9, 0, 12, 15, 13, 16, 11, 14};
-        BubbleSorter.performSorting(testingArray);
+//        int[] testingArray = new int[] {7, 3, 4, 5, 1, 10, 2, 8, 6, 9, 0, 12, 15, 13, 16, 11, 14};
+//        BubbleSorter.performSorting(testingArray);
+
+        String[] testingArray = new String[] {"B", "L", "C", "G", "K", "N", "J", "D", "E", "H", "I", "O", "Q", "R", "M", "A", "F", "P"};
+        new BubbleSorter<String>().performSortingForAll(testingArray);
 
         String result = "";
         for(int step = 0; step < testingArray.length; step++) {
