@@ -42,9 +42,9 @@ public class QuickSorter {
         return leftPtr;
     }
 
-    private void swap(int firstElement, int secondElement) {
-        long temp = mUsingArray[firstElement];
-        mUsingArray[firstElement] = mUsingArray[secondElement];
-        mUsingArray[secondElement] = temp;
+    private void swap(int firstIndex, int secondIndex) {
+        long temp = mUsingArray[firstIndex];
+        mUsingArray[firstIndex] = mUsingArray[secondIndex];
+        mUsingArray[secondIndex] = temp;
     }
 }
