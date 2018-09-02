@@ -20,13 +20,13 @@ public class SomeSimpleAlgorithms {
         return result;
     }
 
-    public static String showFibonacciDigits(long firstDigit, long secondDigit, long limit) {
+    public static String getFibonacciDigits(long firstDigit, long secondDigit, long limit) {
         String result = firstDigit + " " + secondDigit + " ";
 
         while(secondDigit < limit) {
             long firstDigitCopy = firstDigit;
             firstDigit = secondDigit;
-            secondDigit = firstDigitCopy + firstDigit;
+            secondDigit += firstDigitCopy;
             result += secondDigit + " ";
         }
 

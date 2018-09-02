@@ -2,7 +2,7 @@ package com.workout.algorithms.algorithms;
 
 public class RunningClass {
     public static void main(String[] args) {
-        System.out.println(SomeSimpleAlgorithms.showFibonacciDigits(0, 1, 55));
+        System.out.println(SomeSimpleAlgorithms.getFibonacciDigits(0, 1, 144));
     }
 
     private static void showLongArray(long[] array) {
