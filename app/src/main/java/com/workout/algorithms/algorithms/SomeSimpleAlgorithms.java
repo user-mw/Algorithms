@@ -19,4 +19,17 @@ public class SomeSimpleAlgorithms {
         System.out.println(result);
         return result;
     }
+
+    public static String showFibonacciDigits(long firstDigit, long secondDigit, long limit) {
+        String result = firstDigit + " " + secondDigit + " ";
+
+        while(secondDigit < limit) {
+            long firstDigitCopy = firstDigit;
+            firstDigit = secondDigit;
+            secondDigit = firstDigitCopy + firstDigit;
+            result += secondDigit + " ";
+        }
+
+        return result;
+    }
 }

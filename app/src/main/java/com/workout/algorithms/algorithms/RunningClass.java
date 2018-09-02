@@ -2,17 +2,7 @@ package com.workout.algorithms.algorithms;
 
 public class RunningClass {
     public static void main(String[] args) {
-        String[] testingArray = new String[] {"B", "L", "C", "G", "K", "N", "J", "D", "E", "H", "I", "O", "Q", "R", "M", "A", "F", "P"};
-
-//        long[] testingArray = new long[] {0, 1, 4, 2, 5, 10, 7, 3, 8, 9, 6, 12, 16, 13, 11, 15, 14};
-//        QuickSorter sorter = new QuickSorter(testingArray);
-//        sorter.performSorting(0, testingArray.length - 1);
-//        showLongArray(testingArray);
-
-        QuickSorter<String> sorter = new QuickSorter<>(testingArray);
-        sorter.performSortingForAll(0, testingArray.length - 1);
-        showStringArray(testingArray);
-
+        System.out.println(SomeSimpleAlgorithms.showFibonacciDigits(0, 1, 55));
     }
 
     private static void showLongArray(long[] array) {
