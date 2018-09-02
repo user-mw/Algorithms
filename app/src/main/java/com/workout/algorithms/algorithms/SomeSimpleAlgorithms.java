@@ -32,4 +32,16 @@ public class SomeSimpleAlgorithms {
 
         return result;
     }
+
+    public static String getFibonacciDigitsRecursive(long firstDigit, long secondDigit, long limit) {
+        if(secondDigit >= limit) {
+            return secondDigit + "";
+        }
+
+        if(firstDigit == 0) {
+            return firstDigit + " " + secondDigit + " " + getFibonacciDigitsRecursive(secondDigit, secondDigit + firstDigit, limit);
+        }
+
+        return secondDigit + " " + getFibonacciDigitsRecursive(secondDigit, secondDigit + firstDigit, limit);
+    }
 }
