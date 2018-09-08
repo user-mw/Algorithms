@@ -49,7 +49,7 @@ public class QuickSorter<T extends Comparable> {
         mGenericArray[secondIndex] = temp;
     }
 
-    public QuickSorter(long[] newArray) { // not generic yet
+    public QuickSorter(long[] newArray) {
         mUsingArray = newArray;
     }
 
