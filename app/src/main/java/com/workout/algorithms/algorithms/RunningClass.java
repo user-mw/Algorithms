@@ -2,8 +2,8 @@ package com.workout.algorithms.algorithms;
 
 public class RunningClass {
     public static void main(String[] args) {
-        //System.out.println(SomeSimpleAlgorithms.getFibonacciDigits(0, 1, 144));
-        System.out.println(SomeSimpleAlgorithms.getFibonacciDigitsRecursive(0, 1, 1000));
+        System.out.println(SomeSimpleAlgorithms.testFactorial(6));
+        System.out.println(SomeSimpleAlgorithms.testSimpleFactorial(6));
     }
 
     private static void showLongArray(long[] array) {

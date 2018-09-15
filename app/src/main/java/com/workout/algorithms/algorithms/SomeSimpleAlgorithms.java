@@ -1,6 +1,16 @@
 package com.workout.algorithms.algorithms;
 
 public class SomeSimpleAlgorithms {
+    public static int testSimpleFactorial(int digit) {
+        int result = 1;
+
+        for(int step = 1; step <= digit; step++) {
+            result *= step;
+        }
+
+        return result;
+    }
+
     public static int testFactorial(int digit) {
         if(digit == 1) {
             return 1;
