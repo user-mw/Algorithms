@@ -68,12 +68,10 @@ public class BinaryTree<T extends Comparable<T>> {
         if(current.getLeft() == null && current.getRight() == null) {
             if(parent == null) {
                 mRoot = null;
+            } else if(isLeftChild) {
+                parent.setLeft(null);
             } else {
-                if(isLeftChild) {
-                    parent.setLeft(null);
-                } else {
-                    parent.setRight(null);
-                }
+                parent.setRight(null);
             }
         } else if(current.getRight() == null) {
             if(parent == null) {
