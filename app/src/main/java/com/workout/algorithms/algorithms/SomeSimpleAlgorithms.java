@@ -1,5 +1,7 @@
 package com.workout.algorithms.algorithms;
 
+import com.workout.algorithms.data_structures.linked_list.LinkedListNode;
+
 public class SomeSimpleAlgorithms {
     public static int testSimpleFactorial(int digit) {
         int result = 1;
@@ -65,5 +67,20 @@ public class SomeSimpleAlgorithms {
         }
 
         return result;
+    }
+
+    public static LinkedListNode<Integer> reverseLinkedList(LinkedListNode<Integer> node) {
+        LinkedListNode<Integer> previous = null;
+        LinkedListNode<Integer> current = node;
+        LinkedListNode<Integer> next = null;
+
+        while(current != null) {
+            next = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = next;
+        }
+
+        return previous;
     }
 }
