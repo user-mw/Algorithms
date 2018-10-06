@@ -2,8 +2,7 @@ package com.workout.algorithms.algorithms;
 
 public class RunningClass {
     public static void main(String[] args) {
-        System.out.println(SomeSimpleAlgorithms.testFactorial(6));
-        System.out.println(SomeSimpleAlgorithms.testSimpleFactorial(6));
+        System.out.println(SomeSimpleAlgorithms.reverseString("looc si tropS"));
     }
 
     private static void showLongArray(long[] array) {

@@ -54,4 +54,16 @@ public class SomeSimpleAlgorithms {
 
         return secondDigit + " " + getFibonacciDigitsRecursive(secondDigit, secondDigit + firstDigit, limit);
     }
+
+    public static String reverseString(String input) {
+        String result = "";
+
+        char[] letters = input.toCharArray();
+
+        for(int step = letters.length - 1; step >= 0; step--) {
+            result += letters[step];
+        }
+
+        return result;
+    }
 }
