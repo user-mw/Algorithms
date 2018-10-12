@@ -93,12 +93,12 @@ public class CustomLinkedList<T> {
         }
     }
 
-    public LinkedListNode<T> find(T item) {
+    public T find(T item) {
         LinkedListNode<T> current = mFirstElement;
 
         while(current != null) {
             if(current.getValue().equals(item)) {
-                return current;
+                return current.getValue();
             }
 
             current = current.getNext();
