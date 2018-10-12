@@ -1,22 +1,29 @@
 package com.workout.algorithms.algorithms;
 
-import com.workout.algorithms.data_structures.linked_list.LinkedListNode;
+import com.workout.algorithms.data_structures.hash_table.CustomHashTable;
 
 public class RunningClass {
     public static void main(String[] args) {
-        LinkedListNode<Integer> testNode = new LinkedListNode<>(1);
+        CustomHashTable<String> customHashTable = new CustomHashTable<>(8);
 
-        testNode.setNext(new LinkedListNode<Integer>(2));
-        testNode.getNext().setNext(new LinkedListNode<Integer>(3));
-        testNode.getNext().getNext().setNext(new LinkedListNode<Integer>(4));
-        testNode.getNext().getNext().getNext().setNext(new LinkedListNode<Integer>(5));
+        customHashTable.add("One");
+        customHashTable.add("Two");
+        customHashTable.add("Three");
+        customHashTable.add("Four");
+        customHashTable.add("Five");
+        customHashTable.add("Six");
+        customHashTable.add("Seven");
+        customHashTable.add("Eight");
 
-        LinkedListNode<Integer> newCurrent = SomeSimpleAlgorithms.reverseLinkedList(testNode);
+        customHashTable.showTable();
 
-        while(newCurrent != null) {
-            System.out.println(newCurrent.getValue());
-            newCurrent = newCurrent.getNext();
-        }
+        customHashTable.delete("Four");
+
+        System.out.println();
+
+        customHashTable.showTable();
+
+        System.out.println(customHashTable.find("Six") != null);
     }
 
     private static void showLongArray(long[] array) {
