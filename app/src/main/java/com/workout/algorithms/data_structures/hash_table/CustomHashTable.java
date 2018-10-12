@@ -1,7 +1,6 @@
 package com.workout.algorithms.data_structures.hash_table;
 
 import com.workout.algorithms.data_structures.linked_list.CustomLinkedList;
-import com.workout.algorithms.data_structures.linked_list.LinkedListNode;
 
 public class CustomHashTable<T> {
     private CustomLinkedList[] mEntries;
