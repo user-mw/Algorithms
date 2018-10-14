@@ -1,4 +1,4 @@
-package com.workout.algorithms.data_structures;
+package com.workout.algorithms.data_structures.binary_tree;
 
 import android.support.annotation.NonNull;
 
