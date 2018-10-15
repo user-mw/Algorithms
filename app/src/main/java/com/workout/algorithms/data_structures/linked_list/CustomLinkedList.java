@@ -1,6 +1,10 @@
 package com.workout.algorithms.data_structures.linked_list;
 
-public class CustomLinkedList<T> {
+import android.support.annotation.NonNull;
+
+import java.util.Iterator;
+
+public class CustomLinkedList<T> implements Iterable<T> {
 
     private int mSize;
     private LinkedListNode<T> mFirstElement;
@@ -113,5 +117,25 @@ public class CustomLinkedList<T> {
 
     public LinkedListNode<T> getFirstElement() {
         return mFirstElement;
+    }
+
+    @NonNull
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private LinkedListNode<T> mCurrent = mFirstElement;
+
+            @Override
+            public boolean hasNext() {
+                return mCurrent != null;
+            }
+
+            @Override
+            public T next() {
+                T result = mCurrent.getValue();
+                mCurrent = mCurrent.getNext();
+                return result;
+            }
+        };
     }
 }
