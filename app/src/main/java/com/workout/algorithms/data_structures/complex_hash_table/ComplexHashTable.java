@@ -20,13 +20,14 @@ public class ComplexHashTable<K, V> {
 
         if(current == null) {
             addEntry(hash, key, newValue, index);
-            mSize++;
         } else if(current.hashCode() == hash && (current.key() == key || current.key().equals(key))) {
-
+            delete(key);
+            addEntry(hash, key, newValue, index);
         } else {
             addEntry(hash, key, newValue, index);
-            mSize++;
         }
+
+        mSize++;
     }
 
     public V get(K key) {
