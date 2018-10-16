@@ -1,19 +1,25 @@
 package com.workout.algorithms.algorithms;
 
-import com.workout.algorithms.data_structures.complex_hash_table.ComplexHashTable;
+import com.workout.algorithms.data_structures.array_list.CustomArrayList;
 
 public class RunningClass {
     public static void main(String[] args) {
-        ComplexHashTable<String, Integer> testingHashTable = new ComplexHashTable<>();
+        CustomArrayList<String> testArrayList = new CustomArrayList<>();
 
-        testingHashTable.add("One", 1);
-        testingHashTable.add("Two", 2);
-        testingHashTable.add("Three", 3);
-        testingHashTable.add("Four", 4);
-        testingHashTable.add("Four", 4111);
+        testArrayList.add("One");
+        testArrayList.add("Five");
+        testArrayList.add("Three");
+        testArrayList.add("Four");
+        testArrayList.deleteAt(1);
 
-        testingHashTable.showHashTable();
-        System.out.println(testingHashTable.size());
+        testArrayList.insert(1, "Two");
+
+        System.out.println(testArrayList.size());
+        System.out.printf("Index of Two is %s\n", testArrayList.indexOf("Two"));
+
+        for(String value : testArrayList) {
+            System.out.print(value + " ");
+        }
     }
 
     private static void showLongArray(long[] array) {
