@@ -1,25 +1,27 @@
 package com.workout.algorithms.algorithms;
 
 import com.workout.algorithms.data_structures.array_list.CustomArrayList;
+import com.workout.algorithms.data_structures.queue.ArrayQueue;
 
 public class RunningClass {
     public static void main(String[] args) {
-        CustomArrayList<String> testArrayList = new CustomArrayList<>();
+        ArrayQueue<Integer> testQueue = new ArrayQueue<>();
 
-        testArrayList.add("One");
-        testArrayList.add("Five");
-        testArrayList.add("Three");
-        testArrayList.add("Four");
-        testArrayList.deleteAt(1);
+        testQueue.add(1);
+        testQueue.add(2);
+        testQueue.add(3);
+        testQueue.add(4);
+        testQueue.add(5);
+        testQueue.add(6);
+        testQueue.add(7);
+        testQueue.add(8);
+        testQueue.add(9);
+        testQueue.add(10);
 
-        testArrayList.insert(1, "Two");
-
-        System.out.println(testArrayList.size());
-        System.out.printf("Index of Two is %s\n", testArrayList.indexOf("Two"));
-
-        for(String value : testArrayList) {
-            System.out.print(value + " ");
+        for(Integer value : testQueue) {
+            System.out.printf("%s ", value);
         }
+
     }
 
     private static void showLongArray(long[] array) {
