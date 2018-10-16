@@ -12,19 +12,24 @@ public class ComplexHashTable<K, V> {
         }
     }
 
-    public void add(K key, V newValue) {
+    public V add(K key, V newValue) {
         int hash = hash(key.hashCode());
         int index = indexFor(hash, 16);
+
+        V result = null;
 
         Entry<K, V> current = mEntries[index].find(key, hash);
 
         if(current == null) {
             addEntry(hash, key, newValue, index);
         } else {
+            result = current.value();
             delete(key);
             addEntry(hash, key, newValue, index);
         }
         mSize++;
+
+        return result;
     }
 
     public V get(K key) {
