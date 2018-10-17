@@ -1,26 +1,36 @@
 package com.workout.algorithms.algorithms;
 
-import com.workout.algorithms.data_structures.array_list.CustomArrayList;
-import com.workout.algorithms.data_structures.queue.ArrayQueue;
+import com.workout.algorithms.data_structures.doubly_linked_list.DoublyLinkedList;
 
 public class RunningClass {
     public static void main(String[] args) {
-        ArrayQueue<Integer> testQueue = new ArrayQueue<>();
+        DoublyLinkedList<Integer> testing = new DoublyLinkedList<>();
 
-        testQueue.add(1);
-        testQueue.add(2);
-        testQueue.add(3);
-        testQueue.add(4);
-        testQueue.add(5);
-        testQueue.add(6);
-        testQueue.add(7);
-        testQueue.add(8);
-        testQueue.add(9);
-        testQueue.add(10);
+        testing.add(1);
+        testing.add(2);
+        testing.add(3);
+        testing.add(4);
+        testing.add(5);
+        testing.add(6);
+        testing.add(7);
 
-        for(Integer value : testQueue) {
+        testing.delete(5);
+        testing.deleteFirst();
+        testing.deleteLast();
+
+        testing.addFirst(0);
+
+        for(Integer value : testing) {
             System.out.printf("%s ", value);
         }
+
+        System.out.printf("\nSize is %s \n", testing.size());
+
+        testing.clear();
+
+        System.out.printf("Size is %s \n", testing.size());
+        System.out.println(testing.getFirstElement());
+        System.out.println(testing.getLastElement());
 
     }
 
