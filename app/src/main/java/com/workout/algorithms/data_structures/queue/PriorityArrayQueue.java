@@ -62,8 +62,8 @@ public class PriorityArrayQueue<T extends Comparable> implements Iterable {
 
     @NonNull
     @Override
-    public Iterator iterator() {
-        return new Iterator() {
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
             private int mStep = 0;
 
             @Override
@@ -72,7 +72,7 @@ public class PriorityArrayQueue<T extends Comparable> implements Iterable {
             }
 
             @Override
-            public Object next() {
+            public T next() {
                 T result = mItems[mStep];
                 mStep++;
                 return result;
