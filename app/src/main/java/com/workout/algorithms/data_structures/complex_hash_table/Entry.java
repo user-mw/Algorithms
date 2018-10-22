@@ -4,9 +4,9 @@ public class Entry<K, V> {
     private K mKey;
     private V mValue;
     private int mHashCode;
-    private Entry mNext;
+    private Entry<K, V> mNext;
 
-    public Entry(K key, V value, int hashCode, Entry next) {
+    public Entry(K key, V value, int hashCode, Entry<K, V> next) {
         mKey = key;
         mValue = value;
         mHashCode = hashCode;
@@ -25,11 +25,11 @@ public class Entry<K, V> {
         return mHashCode;
     }
 
-    public Entry next() {
+    public Entry<K, V> next() {
         return mNext;
     }
 
-    public void setNext(Entry next) {
+    public void setNext(Entry<K, V> next) {
         mNext = next;
     }
 }
