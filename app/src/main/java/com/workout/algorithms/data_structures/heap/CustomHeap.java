@@ -62,13 +62,13 @@ public class CustomHeap<T extends Comparable<T>> implements Iterable<T> {
 
     public void displayHeap()
     {
-        System.out.print("heapArray: "); // Формат массива
-        for(int m=0; m<mSize; m++) {
+        System.out.print("heapArray: ");
+        for(int m = 0; m < mSize; m++) {
             if(mItems[m] != null) {
-                System.out.print( mItems[m].value() + " ");
+                System.out.print(mItems[m].value() + " ");
             }
             else {
-                System.out.print( "-- ");
+                System.out.print("-- ");
             }
         }
 
@@ -83,7 +83,7 @@ public class CustomHeap<T extends Comparable<T>> implements Iterable<T> {
         {
             if(column == 0) {
                 for(int k=0; k<nBlanks; k++) {
-                    System.out.print(' ');
+                    System.out.print(" ");
                 }
             }
 
@@ -99,7 +99,7 @@ public class CustomHeap<T extends Comparable<T>> implements Iterable<T> {
                 System.out.println();
             }
             else {
-                for(int k=0; k<nBlanks*2-2; k++) {
+                for(int k = 0; k < nBlanks * 2 - 2; k++) {
                     System.out.print(" ");
                 }
             }
