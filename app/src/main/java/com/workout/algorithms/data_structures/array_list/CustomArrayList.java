@@ -70,7 +70,7 @@ public class CustomArrayList<T> implements Iterable<T> {
     }
 
     public boolean delete(T itemToDelete) {
-        for(int step = 0; step < mItems.length; step++) {
+        for(int step = 0; step < mSize; step++) {
             if(mItems[step].equals(itemToDelete)) {
                 deleteAt(step);
                 return true;

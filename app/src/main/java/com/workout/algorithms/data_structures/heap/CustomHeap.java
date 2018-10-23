@@ -107,6 +107,10 @@ public class CustomHeap<T extends Comparable<T>> implements Iterable<T> {
         System.out.println("\n" + dots + dots);
     }
 
+    public T peek() {
+        return mItems[0].value();
+    }
+
     @NonNull
     @Override
     public Iterator<T> iterator() {
@@ -115,7 +119,7 @@ public class CustomHeap<T extends Comparable<T>> implements Iterable<T> {
 
             @Override
             public boolean hasNext() {
-                return mSize != 0 && mItems[mStep] != null;
+                return mStep < mSize;
             }
 
             @Override
