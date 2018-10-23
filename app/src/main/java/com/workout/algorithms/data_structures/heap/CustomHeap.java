@@ -157,8 +157,7 @@ public class CustomHeap<T extends Comparable<T>> implements Iterable<T> {
                 largerChild = leftChild;
             }
 
-            if(top.compareTo(mItems[largerChild].value()) > 0
-                    || top.compareTo(mItems[largerChild].value()) == 0) {
+            if(top.compareTo(mItems[largerChild].value()) >= 0) {
                 break;
             }
 
