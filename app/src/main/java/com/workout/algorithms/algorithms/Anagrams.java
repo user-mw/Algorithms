@@ -13,7 +13,7 @@ public class Anagrams {
         createAnagram(mLetters.length);
     }
 
-    public void createAnagram(int newSize) {
+    private void createAnagram(int newSize) {
         if(newSize == 1) {
             return;
         } else {
