@@ -17,7 +17,6 @@ public class ComplexHashTable<K, V> {
         int index = indexFor(hash, 16);
 
         V result = null;
-
         Entry<K, V> current = mEntries[index].find(key, hash);
 
         if(current == null) {
