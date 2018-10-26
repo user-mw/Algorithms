@@ -5,12 +5,12 @@ public class EntryLinkedList<K, V> {
     private int mSize;
 
     public void add(K key, V value, int hash, Entry<K, V> next) {
-        Entry<K, V> newItem = new Entry<>(key, value, hash, next);
+        Entry<K, V> newElement = new Entry<>(key, value, hash, next);
 
         if(mSize != 0) {
-            newItem.setNext(mFirstElement);
+            newElement.setNext(mFirstElement);
         }
-        mFirstElement = newItem;
+        mFirstElement = newElement;
         mSize++;
     }
 
