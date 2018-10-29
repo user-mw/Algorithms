@@ -20,24 +20,6 @@ public class BinaryTree<T extends Comparable<T>> {
         return findInTree(item) != null;
     }
 
-    public BinaryTreeNode<T> findInTree(T item) {
-        BinaryTreeNode<T> current = mRoot;
-
-        while(current != null) {
-            int result = current.compareTo(item);
-
-            if(result > 0) {
-                current = current.getLeft();
-            } else if(result < 0) {
-                current = current.getRight();
-            } else {
-                break;
-            }
-        }
-
-        return current;
-    }
-
     public boolean delete(T itemToDelete) {
         BinaryTreeNode<T> current = mRoot;
         BinaryTreeNode<T> parent = null;
@@ -193,6 +175,24 @@ public class BinaryTree<T extends Comparable<T>> {
                 addTo(node.getRight(), item);
             }
         }
+    }
+
+    private BinaryTreeNode<T> findInTree(T item) {
+        BinaryTreeNode<T> current = mRoot;
+
+        while(current != null) {
+            int result = current.compareTo(item);
+
+            if(result > 0) {
+                current = current.getLeft();
+            } else if(result < 0) {
+                current = current.getRight();
+            } else {
+                break;
+            }
+        }
+
+        return current;
     }
 
     private BinaryTreeNode<T> getLeftMost(BinaryTreeNode<T> nodeToDelete) {
