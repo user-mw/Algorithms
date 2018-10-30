@@ -143,9 +143,8 @@ public class CustomArrayList<T> implements Iterable<T> {
 
 //        one more variant
 //        int newLength = 4;
-//
 //        if(mItems.length > 0) {
-//            newLength *= 2;
+//            newLength = mItems.length * 2;
 //        }
 
         mItems = Arrays.copyOf(mItems, newLength);
