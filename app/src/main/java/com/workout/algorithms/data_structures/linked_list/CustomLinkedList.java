@@ -65,6 +65,12 @@ public class CustomLinkedList<T> implements Iterable<T> {
         return false;
     }
 
+    public void clear() {
+        mFirstElement = null;
+        mLastElement = null;
+        mSize = 0;
+    }
+
     public boolean contains(T item) {
         LinkedListNode<T> current = mFirstElement;
 
