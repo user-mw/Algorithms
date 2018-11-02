@@ -11,7 +11,7 @@ public class CustomArrayList<T> implements Iterable<T> {
     private int mSize;
 
     public CustomArrayList() {
-        mItems = (T[]) Array.newInstance(Object.class, 0);
+        this(0);
     }
 
     public CustomArrayList(int newLength) {
