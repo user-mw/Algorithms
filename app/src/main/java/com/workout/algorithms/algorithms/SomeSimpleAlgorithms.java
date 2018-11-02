@@ -83,4 +83,17 @@ public class SomeSimpleAlgorithms {
 
         return previous;
     }
+
+    public static boolean definePalindrome(int digit) {
+        int fullPart = digit;
+        int reverse = 0;
+
+        while(fullPart != 0) {
+            reverse *= 10;
+            reverse += fullPart % 10;
+            fullPart /= 10;
+        }
+
+        return reverse == digit;
+    }
 }
