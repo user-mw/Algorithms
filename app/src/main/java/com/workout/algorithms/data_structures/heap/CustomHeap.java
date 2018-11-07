@@ -168,7 +168,6 @@ public class CustomHeap<T extends Comparable<T>> implements Iterable<T> {
             mItems[index] = mItems[largerChild];
             index = largerChild;
         }
-
         mItems[index] = top;
     }
 }
