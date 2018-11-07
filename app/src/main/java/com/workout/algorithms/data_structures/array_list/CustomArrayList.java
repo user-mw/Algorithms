@@ -96,6 +96,11 @@ public class CustomArrayList<T> implements Iterable<T> {
         mSize--;
     }
 
+    public void clear() {
+        mItems = (T[]) Array.newInstance(Object.class, 0);
+        mSize = 0;
+    }
+
     public boolean contains(T item) {
         return indexOf(item) != -1;
     }
