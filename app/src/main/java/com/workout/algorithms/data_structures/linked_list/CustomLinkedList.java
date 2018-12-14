@@ -125,6 +125,10 @@ public class CustomLinkedList<T> implements Iterable<T> {
         return mFirstElement;
     }
 
+    public LinkedListNode<T> getLastElement() {
+        return mLastElement;
+    }
+
     @NonNull
     @Override
     public Iterator<T> iterator() {
