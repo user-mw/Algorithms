@@ -153,6 +153,36 @@ public class BinaryTree<T extends Comparable<T>> {
         }
     }
 
+    public void preOrderTraversalRecursive(BinaryTreeNode<T> node) {
+        if(node == null) {
+            return;
+        }
+
+        System.out.print(node.getValue() + " ");
+        preOrderTraversalRecursive(node.getLeft());
+        preOrderTraversalRecursive(node.getRight());
+    }
+
+    public void inOrderTraversalRecursive(BinaryTreeNode<T> node) {
+        if(node == null) {
+            return;
+        }
+
+        inOrderTraversalRecursive(node.getLeft());
+        System.out.print(node.getValue() + " ");
+        inOrderTraversalRecursive(node.getRight());
+    }
+
+    public void postOrderTraversalRecursive(BinaryTreeNode<T> node) {
+        if(node == null) {
+            return;
+        }
+
+        postOrderTraversalRecursive(node.getLeft());
+        postOrderTraversalRecursive(node.getRight());
+        System.out.print(node.getValue() + " ");
+    }
+
     public int getSize() {
         return mSize;
     }
