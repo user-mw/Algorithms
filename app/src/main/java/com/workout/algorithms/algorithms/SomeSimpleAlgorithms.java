@@ -173,4 +173,26 @@ public class SomeSimpleAlgorithms {
 
         return reverseLinkedList(result);
     }
+
+    public static LinkedListNode<Integer> reverseListByGroups(LinkedListNode<Integer> node, int groupsCount) {
+        LinkedListNode<Integer> previous = null;
+        LinkedListNode<Integer> current = node;
+        LinkedListNode<Integer> next = null;
+
+        int index = 0;
+
+        while(index < groupsCount && current != null) {
+            next = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = next;
+            index++;
+        }
+
+        if(next != null) {
+            node.setNext(reverseListByGroups(next, groupsCount));
+        }
+
+        return previous;
+    }
 }
