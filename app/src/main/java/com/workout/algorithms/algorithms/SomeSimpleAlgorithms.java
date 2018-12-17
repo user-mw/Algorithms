@@ -96,4 +96,81 @@ public class SomeSimpleAlgorithms {
 
         return reverse == digit;
     }
+
+    private static LinkedListNode<Integer> getChosenReverse(LinkedListNode<Integer> node, int firstIndex, int lastIndex) {
+        LinkedListNode<Integer> reverseStart = null;
+        LinkedListNode<Integer> reverseEnd = null;
+        LinkedListNode<Integer> reverseStartPrevious = null;
+        LinkedListNode<Integer> reverseEndNext = null;
+
+        LinkedListNode<Integer> current = node;
+        int index = 0;
+
+        while(current != null && index <= lastIndex) {
+            if(index < firstIndex) {
+                reverseStartPrevious = current;
+            }
+
+            if(index == firstIndex) {
+                reverseStart = current;
+            }
+
+            if(index == lastIndex) {
+                reverseEnd = current;
+                reverseEndNext = current.getNext();
+            }
+
+            current = current.getNext();
+            index++;
+        }
+
+        reverseEnd.setNext(null);
+        reverseEnd = reverseLinkedList(reverseStart);
+
+        if(reverseStartPrevious != null) {
+            reverseStartPrevious.setNext(reverseEnd);
+        } else {
+            node = reverseEnd;
+        }
+
+        reverseStart.setNext(reverseEndNext);
+        return node;
+    }
+
+    private static LinkedListNode<Integer> getSpecialReverseSum(LinkedListNode<Integer> firstDigit, LinkedListNode<Integer> secondDigit) {
+        LinkedListNode<Integer> result = null;
+
+        LinkedListNode<Integer> currentOne = firstDigit;
+        LinkedListNode<Integer> currentTwo = secondDigit;
+
+        int addition = 0;
+
+        while(currentOne != null) {
+            int sum = currentOne.getValue() + currentTwo.getValue() + addition;
+
+            if(sum > 9) {
+                sum %= 10;
+                addition = 1;
+            } else {
+                addition = 0;
+            }
+
+            LinkedListNode<Integer> newElement = new LinkedListNode<>(sum);
+            if(result != null) {
+                newElement.setNext(result);
+            }
+            result = newElement;
+
+            currentOne = currentOne.getNext();
+            currentTwo = currentTwo.getNext();
+        }
+
+        if(addition != 0) {
+            LinkedListNode<Integer> resultCopy = result;
+            result = new LinkedListNode<>(1);
+            result.setNext(resultCopy);
+        }
+
+        return reverseLinkedList(result);
+    }
 }
