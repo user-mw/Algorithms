@@ -97,7 +97,7 @@ public class SomeSimpleAlgorithms {
         return reverse == digit;
     }
 
-    private static LinkedListNode<Integer> getChosenReverse(LinkedListNode<Integer> node, int firstIndex, int lastIndex) {
+    public static LinkedListNode<Integer> getChosenReverse(LinkedListNode<Integer> node, int firstIndex, int lastIndex) {
         LinkedListNode<Integer> reverseStart = null;
         LinkedListNode<Integer> reverseEnd = null;
         LinkedListNode<Integer> reverseStartPrevious = null;
@@ -137,7 +137,7 @@ public class SomeSimpleAlgorithms {
         return node;
     }
 
-    private static LinkedListNode<Integer> getSpecialReverseSum(LinkedListNode<Integer> firstDigit, LinkedListNode<Integer> secondDigit) {
+    public static LinkedListNode<Integer> getSpecialReverseSum(LinkedListNode<Integer> firstDigit, LinkedListNode<Integer> secondDigit) {
         LinkedListNode<Integer> result = null;
 
         LinkedListNode<Integer> currentOne = firstDigit;
