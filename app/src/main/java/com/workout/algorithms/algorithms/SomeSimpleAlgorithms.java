@@ -1,5 +1,6 @@
 package com.workout.algorithms.algorithms;
 
+import com.workout.algorithms.data_structures.doubly_linked_list.DoublyLinkedListNode;
 import com.workout.algorithms.data_structures.linked_list.LinkedListNode;
 
 public class SomeSimpleAlgorithms {
@@ -194,5 +195,37 @@ public class SomeSimpleAlgorithms {
         }
 
         return previous;
+    }
+
+    public static DoublyLinkedListNode<Integer> reverseDoublyLinkedList(DoublyLinkedListNode<Integer> node) {
+        DoublyLinkedListNode<Integer> temp = null;
+        DoublyLinkedListNode<Integer> current = node;
+
+        while(current != null) {
+            temp = current.getPrevious();
+            current.setPrevious(current.getNext());
+            current.setNext(temp);
+            current = current.getPrevious();
+        }
+
+        if(temp != null) {
+            node = temp.getPrevious();
+        }
+
+        return node;
+    }
+
+    public static DoublyLinkedListNode<Integer> reverseDoublyLinkedListFromEnd(DoublyLinkedListNode<Integer> endNode) {
+        DoublyLinkedListNode<Integer> temp = null;
+        DoublyLinkedListNode<Integer> current = endNode;
+
+        while(current != null) {
+            temp = current.getNext();
+            current.setNext(current.getPrevious());
+            current.setPrevious(temp);
+            current = current.getNext();
+        }
+
+        return endNode;
     }
 }
