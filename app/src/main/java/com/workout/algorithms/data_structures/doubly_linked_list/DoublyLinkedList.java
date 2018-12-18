@@ -39,6 +39,37 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         mSize++;
     }
 
+    public boolean addAfter(T value, T item) {
+        if(mSize == 0) {
+            return false;
+        }
+
+        DoublyLinkedListNode<T> current = mFirstElement;
+
+        while(!current.value().equals(value)) {
+            current = current.getNext();
+
+            if(current == null) {
+                return false;
+            }
+        }
+
+        DoublyLinkedListNode<T> newElement = new DoublyLinkedListNode<>(item);
+
+        if(current.equals(mLastElement)) {
+            mLastElement.setNext(newElement);
+            newElement.setPrevious(mLastElement);
+            mLastElement = newElement;
+        } else {
+            newElement.setNext(current.getNext());
+            current.getNext().setPrevious(newElement);
+        }
+
+        newElement.setPrevious(current);
+        current.setNext(newElement);
+        return true;
+    }
+
     public void deleteFirst() {
         if(mSize > 0) {
             if(mSize == 1) {
