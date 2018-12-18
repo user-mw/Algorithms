@@ -67,6 +67,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 
         newElement.setPrevious(current);
         current.setNext(newElement);
+        mSize++;
         return true;
     }
 
