@@ -3,6 +3,8 @@ package com.workout.algorithms.algorithms;
 import com.workout.algorithms.data_structures.doubly_linked_list.DoublyLinkedListNode;
 import com.workout.algorithms.data_structures.linked_list.LinkedListNode;
 
+import java.util.Stack;
+
 public class SomeSimpleAlgorithms {
     public static int testSimpleFactorial(int digit) {
         int result = 1;
@@ -227,5 +229,30 @@ public class SomeSimpleAlgorithms {
         }
 
         return endNode;
+    }
+
+    public static boolean areParenthesesBalanced(String input) {
+        Stack<Character> stack = new Stack<>();
+        char[] chars = input.toCharArray();
+
+        for(int step = 0; step < chars.length; step++) {
+            if(chars[step] == '(') {
+                stack.push(chars[step]);
+            }
+
+            if(chars[step] == ')') {
+                if(stack.isEmpty()) {
+                    return false;
+                } else if(stack.pop() != '(' || chars[step] != ')') {
+                    return false;
+                }
+            }
+        }
+
+        if(stack.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
