@@ -243,7 +243,7 @@ public class SomeSimpleAlgorithms {
             if(chars[step] == ')') {
                 if(stack.isEmpty()) {
                     return false;
-                } else if(stack.pop() != '(' || chars[step] != ')') {
+                } else if(stack.pop() != '(') {
                     return false;
                 }
             }
