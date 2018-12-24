@@ -271,4 +271,17 @@ public class SomeSimpleAlgorithms {
             }
         }
     }
+
+    public static void showSimpleDigitsTwo(int amount) {
+        for(int digit = 2; digit < amount; digit++) {
+            for(int preDigit = 2; preDigit <= digit; preDigit++) {
+                if(digit != preDigit && digit % preDigit == 0) {
+                    break;
+                }
+                if(digit == preDigit) {
+                    System.out.println(digit);
+                }
+            }
+        }
+    }
 }
