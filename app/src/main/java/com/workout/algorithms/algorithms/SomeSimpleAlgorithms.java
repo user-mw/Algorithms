@@ -255,4 +255,20 @@ public class SomeSimpleAlgorithms {
             return false;
         }
     }
+
+    public static void showSimpleDigits(int amount) {
+        for(int step = 2; step < amount; step++) {
+            int count = 0;
+
+            for(int inStep = 2; inStep < amount; inStep++) {
+                if(step % inStep == 0) {
+                    count++;
+                }
+            }
+
+            if(count == 1) {
+                System.out.println(step);
+            }
+        }
+    }
 }
