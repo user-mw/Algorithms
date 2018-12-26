@@ -295,26 +295,26 @@ public class SomeSimpleAlgorithms {
             return result.toString();
         }
 
-        int first = array[0];
-        int last = array[0];
+        int start = array[0];
+        int end = array[0];
 
         result.append(array[0]);
 
         for(int step = 1; step < array.length; step++) {
-            if(array[step] - last != 1) {
-                if(first != last) {
-                    result.append("-").append(last);
+            if(array[step] - end != 1) {
+                if(start != end) {
+                    result.append("-").append(end);
                 }
 
-                first = array[step];
-                result.append(",").append(first);
+                start = array[step];
+                result.append(",").append(start);
             }
 
-            last = array[step];
+            end = array[step];
 
             if(step == array.length - 1) {
-                if(first != last) {
-                    result.append("-").append(last);
+                if(start != end) {
+                    result.append("-").append(end);
                 }
             }
         }
