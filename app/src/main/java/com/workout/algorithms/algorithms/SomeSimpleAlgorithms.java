@@ -3,6 +3,7 @@ package com.workout.algorithms.algorithms;
 import com.workout.algorithms.data_structures.doubly_linked_list.DoublyLinkedListNode;
 import com.workout.algorithms.data_structures.linked_list.LinkedListNode;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class SomeSimpleAlgorithms {
@@ -283,5 +284,41 @@ public class SomeSimpleAlgorithms {
                 }
             }
         }
+    }
+
+    public static String getRanges(int[] array) {
+        Arrays.sort(array);
+
+        StringBuilder result = new StringBuilder();
+
+        if(array.length == 0) {
+            return result.toString();
+        }
+
+        int first = array[0];
+        int last = array[0];
+
+        result.append(array[0]);
+
+        for(int step = 1; step < array.length; step++) {
+            if(array[step] - last != 1) {
+                if(first != last) {
+                    result.append("-").append(last);
+                }
+
+                first = array[step];
+                result.append(",").append(first);
+            }
+
+            last = array[step];
+
+            if(step == array.length - 1) {
+                if(first != last) {
+                    result.append("-").append(last);
+                }
+            }
+        }
+
+        return result.toString();
     }
 }
