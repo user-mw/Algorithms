@@ -321,4 +321,33 @@ public class SomeSimpleAlgorithms {
 
         return result.toString();
     }
+
+    public static int getMaxLength(int[] binaryArray) {
+        int result = 0;
+
+        int zeroPosition = -1;
+        int unitCount = 0;
+
+        for(int step = 0; step < binaryArray.length; step++) {
+            if(binaryArray[step] == 1) {
+                unitCount++;
+            } else {
+                if(zeroPosition == -1) {
+                    zeroPosition = step;
+                } else {
+                    if(result < unitCount) {
+                        result = unitCount;
+                    }
+                    unitCount = step - zeroPosition - 1;
+                    zeroPosition = step;
+                }
+            }
+        }
+
+        if(result < unitCount) {
+            result = unitCount;
+        }
+
+        return result;
+    }
 }
